@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        /*
+        * 核心函数的四大作用：
+        * 1. $函数传入的参数为函数，在文档加载完成之后自动加载这个函数，相当于window.onload=function(){}
+        * 2. 传入参数为html字符串时，根据这个字符串元素创建元素节点对象
+        *    $("id属性值") id选择器，根据id查询标签对象
+        *    $("标签名") 标签名选择器，根据指定的标签名查询标签对象
+        *    $(".class属性值") 类型选择器，根据指的定类型名查询标签对象
+        * 3.
+        * */
+        $(function () {
+            alert("页面加载完成后自动调用");
+            $(" <div>" +
+                "<span>div-span1</span>" +
+                "<span>div-span2</span>" +
+                "</div>").appendTo("body");
+
+            // alert($("button").length);
+            var btnObj = document.getElementById(btn01);
+            // alert(btnObj);
+            // alert($(btnObj));
+            alert($("<h1></h1>"));
+        })
+
+
+    </script>
+</head>
+<body>
+<button id="btn01">按钮1</button>
+<button>按钮2</button>
+<button>按钮3</button>
+</body>
+</html>
